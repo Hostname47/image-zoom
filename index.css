@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(15, 15, 15);
+    margin: 0;
 }
 
 .none {
@@ -8,9 +9,6 @@ body {
 }
 
 #app {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -48,4 +46,98 @@ body {
 }
 .link:hover {
     text-decoration: underline;
+}
+
+#product-box {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 900px;
+    box-sizing: border-box;
+}
+
+#media-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 2;
+}
+
+#meta-box {
+    width: 360px;
+}
+
+#media-preview {
+    height: 380px;
+    width: 480px;
+    border: 1px solid gainsboro;
+}
+
+#media-preview .image {
+    height: 100%;
+}
+
+#product-name {
+    margin: 0;
+    font-size: 22px;
+}
+
+#line-under-title {
+    margin: 14px 0;
+    width: 60px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #383c3f;
+}
+
+#price {
+    display: flex;
+    gap: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(15, 15, 15);
+}
+
+#review-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 20px;
+}
+
+#review-box .reviews-container {
+    height: 14px;
+}
+
+#review-box .reviews-count {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    color: rgb(15, 15, 15);
+}
+
+#description {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.full-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add-to-cart {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #2f2f2f;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+#add-to-cart:hover {
+    background-color: #2f2f2f;
+    color: white;
 }

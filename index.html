@@ -12,7 +12,7 @@
         <script src="index.js" defer></script>
     </head>
     <body>
-        <div id="app">
+        <div id="app" class="full-center">
             <h1 id="title">Image zoom feature</h1>
             <p id="credits">
                 created with
@@ -20,6 +20,63 @@
                 by <a href="https://mouad-nassri.netlify.app" target="_blank" class="link">Mouad</a>
             </p>
             <p id="sub-title">This is an example of a UI side of a product page that use the image zoom.</p>
+
+            <div id="product-box">
+                <div id="media-box">
+                    <!-- product media could be an image or video (in our case, we'll focus on images only) -->
+                    <div id="media-preview" class="full-center">
+                        <!-- nav buttons -->
+                        <img src="./product/media/apx_zoom001.png" class="image" alt="">
+
+                        <div class="screenshots">
+                            <img data-src="product/media/apx_zoom001.png" alt="">
+                            <img data-src="product/media/apx_zoom002.png" alt="">
+                            <img data-src="product/media/apx_zoom003.png" alt="">
+                            <img data-src="product/media/apx_zoom004.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="meta-box">
+                    <h2 id="product-name">Stoeger STR-9 Semi-Auto Pistol - 9mm</h2>
+                    <div id="line-under-title"></div>
+                    <p id="price"><span class="value">274.97</span><span class="currency">$</span></p>
+                    <div id="review-box">
+                        <svg class="reviews-container" viewBox="0 0 881 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                            <g transform="matrix(1,0,0,1,-634.728,-382.568)">
+                                <path d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z" style="fill:rgb(255, 179, 0);"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,-447.914,-382.568)">
+                                <path d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z" style="fill:rgb(255, 179, 0);"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,-261.961,-382.568)">
+                                <path d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z" style="fill:rgb(255, 179, 0);"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,-76.0238,-382.568)">
+                                <path d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z" style="fill:rgb(255, 179, 0);"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,109.853,-382.568)">
+                                <path d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z" style="fill:rgb(202, 202, 202);"/>
+                            </g>
+                        </svg>
+                        <p class="reviews-count"><span class="count">19</span> reviews</p>
+                    </div>
+
+                    <div id="description">
+                        <p>The Stoeger® STR-9 Semi-Auto Pistol utilizes a striker-fired mechanism and outstanding ergonomics to deliver rapid shots with unfailing reliability. The polymer frame features aggressive texturing, thumb groves, and an under-cut trigger guard to provide a non-slip hold and position the shooter's hand close to the bore axis for enhanced control and quick follow-up shots.</p>
+                        <ul>
+                            <li>Striker-fired operation</li>
+                            <li>Outstanding ergonomics</li>
+                            <li>Interchangeable backstrap</li>
+                            <li>Dovetailed, 3-dot sights</li>
+                            <li>Trigger lever safety</li>
+                        </ul>
+                    </div>
+
+                    <button id="add-to-cart" class="full-center">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
