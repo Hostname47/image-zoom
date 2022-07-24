@@ -19,21 +19,23 @@
                 <svg class="heart-beating" fill="#FF0000" style="width: 16px; stroke: #331010; stroke-width: 5px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 94.5"><path d="M86.82,26.63v-7.3H78.64V12H62.27v7.29H54.09v7.3H45.91v-7.3H37.73V12H21.36v7.29H13.18v7.3H5V48.5h8.18v7.29h8.18v7.29h8.19v7.29h8.18v7.3h8.18V85h8.18V77.67h8.18v-7.3h8.18V63.08h8.19V55.79h8.18V48.5H95V26.63Z"/></svg>
                 by <a href="https://mouad-nassri.netlify.app" target="_blank" class="link">Mouad</a>
             </p>
-            <p id="sub-title">This is an example of a UI side of a product page that use the image zoom.</p>
 
             <div id="product-box">
                 <div id="media-box">
                     <!-- product media could be an image or video (in our case, we'll focus on images only) -->
                     <div id="media-preview" class="full-center">
-                        <!-- nav buttons -->
-                        <img src="./product/media/apx_zoom001.png" class="image" alt="">
-
-                        <div class="screenshots">
-                            <img data-src="product/media/apx_zoom001.png" alt="">
-                            <img data-src="product/media/apx_zoom002.png" alt="">
-                            <img data-src="product/media/apx_zoom003.png" alt="">
-                            <img data-src="product/media/apx_zoom004.png" alt="">
-                        </div>
+                        <img src="./product/media/apx_zoom001.png" class="image">
+                        <img src="./assets/zoom-lens.png" id="zoom-lens" class="none">
+                    </div>
+                    <!-- here where we'll render product media when user move mouse over media -->
+                    <div id="media-zoom-box" class="none">
+                        <img src="" id="media-zoom-image">
+                    </div>
+                    <div class="screenshots">
+                        <img data-src="product/media/apx_zoom001.png" alt="">
+                        <img data-src="product/media/apx_zoom002.png" alt="">
+                        <img data-src="product/media/apx_zoom003.png" alt="">
+                        <img data-src="product/media/apx_zoom004.png" alt="">
                     </div>
                 </div>
                 <div id="meta-box">
