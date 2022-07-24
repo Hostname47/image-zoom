@@ -25,11 +25,11 @@
                     <!-- product media could be an image or video (in our case, we'll focus on images only) -->
                     <div id="media-preview" class="full-center">
                         <img src="./product/media/apx_zoom001.png" class="image">
-                        <img src="./assets/zoom-lens.png" id="zoom-lens" class="none">
+                        <img src="./assets/zoom-lens.png" id="zoom-lens" class="none" draggable="false">
                     </div>
                     <!-- here where we'll render product media when user move mouse over media -->
                     <div id="media-zoom-box" class="none">
-                        <img src="" id="media-zoom-image">
+                        <div style="background-image: url(./product/media/apx_zoom001.png)" id="media-zoom-image"></div>
                     </div>
                     <div class="screenshots">
                         <img data-src="product/media/apx_zoom001.png" alt="">
@@ -67,7 +67,6 @@
                         <p>The Stoeger® STR-9 Semi-Auto Pistol utilizes a striker-fired mechanism and outstanding ergonomics to deliver rapid shots with unfailing reliability. The polymer frame features aggressive texturing, thumb groves, and an under-cut trigger guard to provide a non-slip hold and position the shooter's hand close to the bore axis for enhanced control and quick follow-up shots.</p>
                         <ul>
                             <li>Striker-fired operation</li>
-                            <li>Outstanding ergonomics</li>
                             <li>Interchangeable backstrap</li>
                             <li>Dovetailed, 3-dot sights</li>
                             <li>Trigger lever safety</li>
