@@ -28,11 +28,11 @@ document.querySelector('#media-preview').addEventListener('mouseenter', (event) 
      *  1. Zoom the image first by increasing background size of image
      *  2. Find the background position to only display the hovered section of the image
      */
-    let zoomImageWidth = zoomBox.clientWidth / lens.clientWidth * zoomBox.clientWidth;
-    let zoomImageHeight = zoomBox.clientHeight / lens.clientHeight * zoomBox.clientHeight;
+    let zoomImageWidth = mediaPreviewImage.clientWidth / lens.clientWidth * mediaPreviewImage.clientWidth;
+    let zoomImageHeight = mediaPreviewImage.clientHeight / lens.clientHeight * mediaPreviewImage.clientHeight;
 
     zoomImage.style.backgroundSize = `${zoomImageWidth}px ${zoomImageHeight}px`;
-
+    
     config.zoomedImage.width = zoomImageWidth;
     config.zoomedImage.height = zoomImageHeight;
 });
@@ -61,7 +61,8 @@ function moveLens(x, y) {
     let lensLeft = x - config.halfLensWidth;
     let lensTop = y - config.halfLensHeight;
 
-    lens.style.cssText = `left: ${lensLeft}px; top: ${lensTop}px;`;
+    lens.style.left = `${lensLeft}px`;
+    lens.style.top = `${lensTop}px`;
 
     // Set lens details to config
     config.lens.left = lensLeft;
@@ -83,3 +84,39 @@ function moveImage() {
     }
     zoomImage.style.backgroundPosition = `${-coordinates.x}px ${-coordinates.y}px`;
 }
+
+document.querySelectorAll('.center-image').forEach(image => {
+    image.addEventListener('load', (event) => {
+        if(image.clientWidth > image.clientHeight) {
+            image.style.width = '100%';
+        } else {
+            image.style.height = '100%';
+        }
+    });
+});
+
+document.querySelectorAll('#media-container .box').forEach(box => {
+    box.addEventListener('click', (event) => {
+        // Here media could be an image or a video (we're using only images here for simplicity)
+        let image = box.querySelector('.media');
+        let mediaPreviewImage = document.querySelector('#media-preview .image');
+        let zoomImage = document.querySelector('#media-zoom-image');
+
+        document.querySelectorAll('#media-container .box').forEach(box => { box.classList.remove('selected') });
+        box.classList.add('selected');
+
+        console.log(image.naturalWidth);
+        console.log(image.naturalHeight);
+
+        if(image.clientWidth > image.clientHeight) {
+            mediaPreviewImage.style.width = '100%';
+            mediaPreviewImage.style.height = 'auto';
+        } else {
+            mediaPreviewImage.style.width = 'auto';
+            mediaPreviewImage.style.height = '100%';
+        }
+        mediaPreviewImage.src = image.src;
+        zoomImage.style.backgroundImage = `url('${image.src}')`;
+
+    });
+});

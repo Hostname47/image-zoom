@@ -62,14 +62,12 @@ body {
 
 #media-preview {
     position: relative;
+    width: 420px;
+    height: 420px;
     max-height: 420px;
     max-width: 420px;
     border: 1px solid gainsboro;
     overflow: hidden;
-}
-
-#media-preview .image {
-    width: 100%;
 }
 
 #product-name {
@@ -159,4 +157,28 @@ body {
     width: 140px;
     height: 140px;
     user-select: none;
+}
+
+#media-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+#media-container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 2px;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#media-container .selected {
+    border: 1px solid rgb(0, 160, 253) !important;
+    outline: 4px solid rgba(0, 160, 253, 0.2);
 }
